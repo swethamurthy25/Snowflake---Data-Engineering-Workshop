@@ -31,13 +31,13 @@
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/35cebf8b-c367-44b1-bcb7-fcca714c67a6)
 
 * Create an AMAZON S3 External Stage. Go back to AGS_GAME_AUDIENCE database --> RAW Schema --> Create --> Stage --> Amazon S3
-* Provide the stage name as 'uni_swetha' and bucket URL  and click on Create.
+* Provide the stage name as 'uni_swetha' and bucket URL s3://uni-kishore and click on Create.
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/d72ad4cc-c145-4e86-bdf6-49c3a9f7721c)
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/f88aceaa-fd80-4136-8b0a-39b9eac3b857)
 
-* Use the SYSADMIN role and Create a File Format in the AGS_GAME_AUDIENCE.RAW schema named FF_JSON_LOGS.
+* Make sure we are authorized to SYSADMIN and Create a File Format in the AGS_GAME_AUDIENCE.RAW schema named FF_JSON_LOGS.
 * Set the data file Type to JSON and Set the Strip Outer Array Property to TRUE (strip_outer_array = true)
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/57a15617-c02b-43da-ae3f-bb010641077a)
