@@ -19,7 +19,7 @@
 
 
 ### $\textcolor{red}{Creating\ Project\ Infrastructure\}$
-* Use SYSADMIN and Create a database named AGS_GAME_AUDIENCE
+* Make sure we have authorization to SYSADMIN and Create a database named AGS_GAME_AUDIENCE
 * Drop the PUBLIC schema and Create a schema named RAW.
 
   ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/5b208992-7e38-43fc-a7fb-189dfc75ae18)
@@ -31,7 +31,7 @@
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/35cebf8b-c367-44b1-bcb7-fcca714c67a6)
 
 * Create an AMAZON S3 External Stage. Go back to AGS_GAME_AUDIENCE database --> RAW Schema --> Create --> Stage --> Amazon S3
-* Provide the stage name and bucket URL and click on Create.
+* Provide the stage name as 'uni_swetha' and bucket URL  and click on Create.
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/d72ad4cc-c145-4e86-bdf6-49c3a9f7721c)
 
