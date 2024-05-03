@@ -44,7 +44,23 @@
 
 * Loaded the JSON File into the GAME_LOGS table
 
-    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/b48dad62-03d1-4813-856b-d050a1291118)
+   ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/b36385cc-c17c-4151-8a18-099e6e3324a4)
+
+* Build a SELECT statement that separates every field in the RAW_LOG column into its column of the SELECT results.
+* Include the original column RAW_LOG as the last column. We always like to be able to refer back to the original JSON so carrying this field forward is a good idea.
+* When the SELECT is complete, we should have 5 columns.  Four of the column names should MATCH the four keys of the key/value pairs.
+
+   ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/4f91dd32-e5ee-4d12-8e3a-b408cdc1e4fc)
+
+* Now create a view to save the SELECT statement into it. Create a view named LOGS in the RAW schema. 
+
+```SQL
+CREATE VIEW RAW.LOGS AS
+SELECT * FROM GAME_LOGS;
+```
+
+   ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/f50d1b38-7abd-4fdf-ae91-ad59920ef350)
+
 
 
 
