@@ -30,14 +30,14 @@
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/35cebf8b-c367-44b1-bcb7-fcca714c67a6)
 
-* Create an AMAZON S3 External Stage. Go back to AGS_GAME_AUDIENCE database --> RAW Schema --> Create --> Stage --> Amazon S3
+* Create an AMAZON S3 External Stage. Switch to ACCOUNTADMIN Role, Go back to AGS_GAME_AUDIENCE database --> RAW Schema --> Create --> Stage --> Amazon S3
 * Provide the stage name as 'uni_swetha' and bucket URL s3://uni-kishore and click on Create.
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/d72ad4cc-c145-4e86-bdf6-49c3a9f7721c)
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/f88aceaa-fd80-4136-8b0a-39b9eac3b857)
 
-* Make sure we are authorized to SYSADMIN and Create a File Format in the AGS_GAME_AUDIENCE.RAW schema named FF_JSON_LOGS.
+* Switch back to SYSADMIN again and Create a File Format in the AGS_GAME_AUDIENCE.RAW schema named FF_JSON_LOGS.
 * Set the data file Type to JSON and Set the Strip Outer Array Property to TRUE (strip_outer_array = true)
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/57a15617-c02b-43da-ae3f-bb010641077a)
@@ -46,21 +46,22 @@
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/b36385cc-c17c-4151-8a18-099e6e3324a4)
 
-* Build a SELECT statement that separates every field in the RAW_LOG column into its column of the SELECT results.
-* Include the original column RAW_LOG as the last column. We always like to be able to refer back to the original JSON so carrying this field forward is a good idea.
+* Build a SELECT statement that parses every field in the RAW_LOG column into its column of the SELECT results.
+* Include the original column RAW_LOG as the last column. 
 * When the SELECT is complete, we should have 5 columns.  Four of the column names should MATCH the four keys of the key/value pairs.
 
-   ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/4f91dd32-e5ee-4d12-8e3a-b408cdc1e4fc)
+   ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/53536c12-9b18-4c5f-b462-01eae20bac88)
+
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/6bac7607-5d93-4d71-a983-bec2064a5f9a)
 
 
 * Now create a view to save the SELECT statement into it. Create a view named LOGS in the RAW schema. 
 
-```SQL
-CREATE VIEW RAW.LOGS AS
-SELECT * FROM GAME_LOGS;
-```
+   ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/dd0114d0-1fa9-4e6b-a90a-82cd21ce4876)
+
+   ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/660863ee-3ebe-4841-802c-c012f38f5a6b)
+
 
   
 
