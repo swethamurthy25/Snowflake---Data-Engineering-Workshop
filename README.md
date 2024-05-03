@@ -42,6 +42,9 @@
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/57a15617-c02b-43da-ae3f-bb010641077a)
 
+* Loaded the JSON File into the GAME_LOGS table
+
+    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/b48dad62-03d1-4813-856b-d050a1291118)
 
 
 
