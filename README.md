@@ -52,6 +52,9 @@
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/4f91dd32-e5ee-4d12-8e3a-b408cdc1e4fc)
 
+   ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/6bac7607-5d93-4d71-a983-bec2064a5f9a)
+
+
 * Now create a view to save the SELECT statement into it. Create a view named LOGS in the RAW schema. 
 
 ```SQL
@@ -59,7 +62,9 @@ CREATE VIEW RAW.LOGS AS
 SELECT * FROM GAME_LOGS;
 ```
 
-   ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/f50d1b38-7abd-4fdf-ae91-ad59920ef350)
+  
+
+* 
 
 
 
