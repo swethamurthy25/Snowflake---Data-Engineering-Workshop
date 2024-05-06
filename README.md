@@ -62,10 +62,24 @@
 
    ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/660863ee-3ebe-4841-802c-c012f38f5a6b)
 
+* Create the below two file formats in VEGGIES Schema
 
-  
+  ```SQL
+  create file format garden_plants.veggies.PIPECOLSEP_ONEHEADROW 
+    TYPE = 'CSV'
+    FIELD_DELIMITER = '|' 
+    SKIP_HEADER = 1 
+    ;
 
-* 
+create file format garden_plants.veggies.COMMASEP_DBLQUOT_ONEHEADROW 
+    TYPE = 'CSV'
+    SKIP_HEADER = 1   
+    FIELD_OPTIONALLY_ENCLOSED_BY = '"' 
+    ;
+```
+  ![image](https://github.com/swethamurthy25/Snowflake---Data-Engineering-Workshop/assets/112581595/cdffa129-021b-45cb-b04d-6bf285e42d3c)
+
+
 
 
 
